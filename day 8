@@ -1,0 +1,4 @@
+– Tokenization
+  Work Done: Split each message into individual words (tokens).
+Why/How: Tokenization allows vectorization of words into numerical features.
+Learned: Tokenized text can now be transformed using BoW or TF-IDF.
