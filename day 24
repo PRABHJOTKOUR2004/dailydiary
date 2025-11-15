@@ -1,0 +1,32 @@
+Confusion Matrix
+  Work Done: Plotted confusion matrix to visualize performance.
+Why/How: Shows true positives, true negatives, false positives, false negatives.
+Learned: Visualization simplifies understanding of model errors.
+
+Code:
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+cm = confusion_matrix(y_test, y_pred)
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.show()
+Input & Prediction
+
+Work Done: Created a text box for users to input messages and added a button to classify them.
+Why/How: Real-time prediction demonstrates model functionality.
+Learned: GUI integrates ML model with end-user interface.
+  from sklearn.metrics import confusion_matrix
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+cm = confusion_matrix(y_test, y_pred)
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.show()
+
+
+Code:
