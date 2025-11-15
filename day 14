@@ -1,0 +1,3 @@
+Checking Sparsity
+  Work Done: Verified if feature matrix is sparse using .shape and .nnz.
+Why/How: Sparse matrices save memory and computation time.
