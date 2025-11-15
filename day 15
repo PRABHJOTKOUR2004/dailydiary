@@ -1,0 +1,7 @@
+– Feature Scaling
+  Work Done: Not mandatory for Naive Bayes.
+Learned: Some algorithms (SVM, KNN) require feature scaling.
+    from sklearn.feature_extraction.text import TfidfVectorizer
+vectorizer = TfidfVectorizer(max_features=3000)
+X = vectorizer.fit_transform(df['clean_text'])
+y = df['label'].map({'ham':0,'spam':1})
