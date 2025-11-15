@@ -1,0 +1,4 @@
+Model Selection
+  Work Done: Chose Multinomial Naive Bayes because it performs well on text data.
+Why/How: Naive Bayes assumes word features are independent, which is suitable for spam detection.
+Learned: Simple algorithms can be highly effective for text classification.
