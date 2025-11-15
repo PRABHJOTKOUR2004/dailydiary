@@ -1,0 +1,5 @@
+Lowercasing and Punctuation Removal
+  Work Done: Converted all text to lowercase and removed punctuation using Python string methods.
+Why/How: Standardizing text prevents the model from treating “Hello” and “hello” differently.
+Learned: Preprocessing is the foundation for accurate ML results.
+  
