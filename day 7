@@ -1,0 +1,4 @@
+Stopwords Removal
+  Work Done: Removed common words (like “the,” “is,” “on”) using nltk.
+Why/How: Stopwords are frequent but carry little meaning. Removing them reduces noise.
+Learned: Reduces feature size, improving model efficiency
