@@ -1,0 +1,10 @@
+Model Saving
+  Work Done: Saved trained model using pickle for later use without retraining.
+Why/How: Allows deployment and easy loading in GUI apps or future projects.
+Learned: Saving trained models improves workflow efficiency.
+
+Code
+    import pickle
+
+with open('spam_model.pkl','wb') as f:
+    pickle.dump(model,f)
