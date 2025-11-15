@@ -1,0 +1,21 @@
+Combined Preprocessing Function
+  Work Done: Created a function to apply all preprocessing steps to text.
+Why/How: Function ensures consistency and saves time during vectorization.
+Learned: Writing reusable functions improves coding efficiency.
+Code Example:
+import string
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+import nltk
+nltk.download('stopwords')
+stop_words = set(stopwords.words('english'))
+ps = PorterStemmer()
+
+def preprocess(text):
+    text = text.lower()
+    text = ''.join([char for char in text if char not in string.punctuation])
+    words = text.split()
+    words = [ps.stem(word) for word in words if word not in stop_words]
+    return ' '.join(words)
+
+df['clean_text'] = df['text'].apply(preprocess)
