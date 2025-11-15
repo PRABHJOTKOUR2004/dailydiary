@@ -1,0 +1,10 @@
+Day 3 – Dataset Collection
+  Work Done:
+
+Collected SMS/Email Spam dataset from Kaggle.
+
+Dataset columns: label (spam/ham) and text (message content).
+
+Why/How: Real datasets are needed to train a model.
+
+Learned: Dataset size and quality directly impact model performance.
