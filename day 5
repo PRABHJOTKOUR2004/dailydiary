@@ -1,0 +1,10 @@
+Dataset Exploration
+  Work Done: Explored dataset using pandas (df.info(), df.describe()) and visualized spam/ham distribution with seaborn.
+Why/How: Helps understand class imbalance (important for ML).
+Learned: Visualization gives insights into dataset characteristics.
+Code Example:
+import pandas as pd
+import seaborn as sns
+df = pd.read_csv('spam.csv', encoding='latin-1')[['v1','v2']]
+df.columns = ['label', 'text']
+sns.countplot(x='label', data=df)
