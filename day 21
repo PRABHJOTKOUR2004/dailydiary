@@ -1,0 +1,6 @@
+Predictions
+  Work Done: Predicted labels for test messages.
+Why/How: Predictions are required to calculate evaluation metrics.
+Learned: Comparing predictions with actual labels shows model effectiveness.
+
+Code:y_pred = model.predict(X_test)
