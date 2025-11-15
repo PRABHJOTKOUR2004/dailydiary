@@ -1,0 +1,4 @@
+Stemming / Lemmatization
+  Work Done: Applied PorterStemmer from nltk to reduce words to root form.
+Why/How: Words like “running” and “runs” become “run,” reducing dimensionality.
+Learned: Stemming improves model generalization.
