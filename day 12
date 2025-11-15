@@ -1,0 +1,4 @@
+TF-IDF Vectorization
+  Work Done: Used TfidfVectorizer to weigh words based on frequency and uniqueness.
+Why/How: Rare words in spam may carry more significance. TF-IDF improves model performance.
+Learned: TF-IDF is preferred over BoW for text classification
