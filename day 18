@@ -1,0 +1,10 @@
+Model Training
+  Work Done: Trained the model using the training dataset.
+Why/How: Model learns patterns from labeled spam and ham messages.
+Learned: Training is where the model “understands” the relationship between words and labels.
+
+Code:
+from sklearn.naive_bayes import MultinomialNB
+
+model = MultinomialNB()
+model.fit(X_train, y_train)
