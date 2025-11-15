@@ -1,0 +1,4 @@
+Day 4 – Dataset Cleaning
+  Work Done: Removed null values, duplicates, irrelevant columns, and checked label distribution.
+Why/How: Duplicate or missing data can mislead the model.
+Learned: Clean dataset ensures better accuracy and model reliability.
