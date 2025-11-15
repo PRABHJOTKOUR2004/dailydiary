@@ -1,0 +1,4 @@
+Bag of Words (BoW)
+  Work Done: Converted text into numeric vectors using BoW.
+Why/How: ML algorithms require numbers, not raw text. BoW counts word frequency.
+Learned: BoW is simple but may not reflect word importance.
