@@ -1,0 +1,122 @@
+Literature Revie
+  Spam email detection has been an active research area for more than two decades. As unsolicited emails continue to evolve in style, intent, and sophistication, researchers have developed increasingly robust computational techniques to distinguish spam from legitimate messages (ham). The literature can be grouped into several waves of advancement:
+1. Early Rule-Based and Heuristic Systems (1995–2002)
+Early spam filters were based almost entirely on manually crafted rules, keyword lists, header analysis, and pattern matching.
+Key Approaches
+Keyword matching: Flag messages containing terms like “free”, “win”,“money”.
+
+Blacklists/Whitelists: Known spammer IP addresses or trusted senders.
+Regular expressions: Detect obfuscation (e.g., “V1agra”).
+Limitations
+Fragile against spammer adaptation
+Require constant maintenance
+High fals-positive rates
+
+Importance
+These systems provided the foundation for automated filtering but lacked generalization.
+2. Machine Learning Approaches (2002–2015)
+The introduction f text-classification algorithms transformed spam detection. The Enron Email Dataset, Ling-Spam, and SpamAssassin became standard benchmarks.
+
+Popular Algorithms
+Naïve Bayes (NB)
+Extremely effective for bag-of-words models
+Assumes feature independence
+Foundational papers: Sahami et al. (1998)
+Support Vector Machines (SVM)
+Works well with high-dimensional sparse features
+Often outperformed NB in early benchmarks
+Decision Trees & Random Forests
+Used for interpretable rle learning
+
+k-Nearest Neighbors (kNN)
+Competitive accuracy but computationally expensive
+Key Feature Engineering Techniques
+TF-IDF Vectorizaion
+
+Character n-grams
+Header metadata
+Content obfuscation patter
+
+3. Feature-Enhanced and Ensemble Models (2015–2020)
+Research began incorporating richer representations.
+Advancements
+Ensemble learning (AdaBoost, XGBoost, stacking models)
+Semantic features using:
+Topic modeling (LDA)
+Word embeddings (Word2Vec, GloVe)
+Behavior-based features
+Email send rate
+Historcal sender reputation
+
+Results
+These models significantly improved accuracy and robustness against adversarial text manipulation.
+4. Deep Learning Era (2016–Present)
+Deep learning models began outperforming classical ML by learning hierarchical representations.
+Neural Architectures Used
+CNN for text classification
+Capture local lexical patterns
+Good for obfuscated spam
+RNN (LSTM/GRU)
+Model long-range dependencies
+Suitable for long email bodies
+Hybrid CNN-RNN Models
+Combine contextual and local pattern detection
+Transformer-based models
+BERT, RoBERTa, DistilBERT, etc.
+Currently state-of-the-art for text classification
+Fine-tuning on small datasets yields high performance.
+Advantages
+Better generalization
+Resistant to adversarial obfuscation
+Capture semantics beyond keywords
+5. Recent Trends (2020–2024)
+A. Adversarial Spam Detection
+Spammers increasingly use:
+Spelling obfuscation
+  AI-generated messages
+Randomized word insertions
+Robust models use:
+Adversarial training
+Character-level CNNs
+Robust fine-tuning of large language models
+B. Real-Time Distributed Spam Detect
+  Cloud-based filtering at mail-server level
+Continuous learning pipelines
+C. Federated Learning
+  import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, accuracy_score
+
+# Example dataset (you can substitute with SpamAssassin or your dataset)
+data = pd.read_csv("spam.csv", encoding='latin-1')
+data = data[['v1', 'v2']]
+data.columns = ['label', 'text']
+
+# Encode labels
+data['label'] = data['label'].map({'ham': 0, 'spam': 1})
+
+# Train-test split
+X_train, X_test, y_train, y_test = train_test_split(
+    data['text'], data['label'], test_size=0.2, random_state=42
+)
+
+# TF-IDF vectorization
+tfidf = TfidfVectorizer(stop_words='english', max_features=5000)
+X_train_tfidf = tfidf.fit_transform(X_train)
+X_test_tfidf = tfidf.transform(X_test)
+
+# Logistic Regression classifier
+model = LogisticRegression(max_iter=200)
+model.fit(X_train_tfidf, y_train)
+
+# Predictions
+y_pred = model.predict(X_test_tfidf)
+
+# Evaluation
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print(classification_report(y_test, y_pred))
+
+
+Protects user privacy by training models without centralizing email data
