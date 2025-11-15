@@ -1,0 +1,4 @@
+Feature Matrix Creation
+  Work Done: Created X (features) and y (labels) for ML training.
+Why/How: ML models require structured input-output format.
+Learned: Dataset is now ready for model training.
