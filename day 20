@@ -1,0 +1,4 @@
+– Initial Testing
+  Work Done: Tested model on the test set and observed initial performance.
+Why/How: Early testing highlights issues like underfitting or misclassification.
+Learned: Always test before final evaluation to catch errors early.
